@@ -1,0 +1,30 @@
+<div id="links" class="well">
+  <h5>
+    <%= fa_icon 'newspaper-o' %>
+    <%= link_to 'Que está pasando', root_path %>
+  </h5>
+  <h5>
+    <%= fa_icon 'paw' %>
+    <%= link_to 'Crear Pooks ', new_event_path %>
+  </h5>
+  <h5>
+    <%= fa_icon 'arrow-circle-right' %>
+    <%= link_to 'Amigos', friends_user_path(current_user) %>
+  </h5>
+  <h5>
+    <%= fa_icon 'arrow-circle-left' %>
+    <%= link_to 'Seguidores', followers_user_path(current_user) %>
+  </h5>
+  <h5>
+    <%= fa_icon 'search' %>
+    <%= link_to('Buscar amigos', find_friends_path)%>
+  </h5>
+  <h5>
+    <%= fa_icon 'pencil' %>
+    <%= link_to 'Editar perfil', edit_user_path(current_user) %>
+  </h5>
+  <h5>
+    <%= fa_icon 'lock' %>
+    <%= link_to 'Cambiar password', edit_user_registration_path %>
+  </h5>
+</div>

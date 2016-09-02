@@ -1,0 +1,79 @@
+<%= form_for(@event) do |f| %>
+  <div class="form-group">
+    <%= f.label :nombre_de_tu_pook %>
+    <%= f.text_field :name, autofocus: true, placeholder: 'Ingresa nombre', class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Especie %>
+    <%= f.select :especie, ['Perro-Canes', 'Gato-Felinos', 'Roedor-Mamifero pequeño', 'Reptil-Anfibio', 'Ave-Pajaros', 'Peces-acuáticos', 'Caballo-Equinos', 'Insecto', 'Exóticos-Otros']%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Raza %>
+    <%= f.text_field :raza, placeholder: 'Indica la raza de tu pooks', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Edad %>
+    <%= f.number_field :edad, autofocus: true, placeholder: 'Ingresa edad', class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fecha_nacimiento %>
+    <%= f.text_field :fecha, placeholder: 'Ingresa fecha', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sexo %>
+    <%= f.select :sex, ['Macho', 'Hembra']%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :pook_inscrito %>
+    <%= f.select :inscrip, ['Si', 'No']%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Número_inscripción %>
+    <%= f.number_field :numero, autofocus: true, placeholder: 'Ingresa número ', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Vacunas_al_día? %>
+    <%= f.select :vacuna, ['Si', 'No']%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Tamaño %>
+    <%= f.select :tamano, ['Pequeño', 'Mediano', 'Grande']%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Color %>
+    <%= f.text_field :color, placeholder: 'Indica el color de tu pook', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Estado_sentimental %>
+    <%= f.select :relacion, ['Soltero', 'Casado', 'viudo', 'en busca de pareja']%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Número_de_hijos %>
+    <%= f.number_field :hijo, autofocus: true, placeholder: 'Ingresa número de hijos ', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Padres %>
+    <%= f.select :papa, ['Si', 'No']%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Parejas %>
+    <%= f.select :pareja, ['Si ha tenido', 'No ha tenido', 'En busca de pareja']%>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit :crear , class: 'btn btn-primary' %>
+  </div>
+<% end %>

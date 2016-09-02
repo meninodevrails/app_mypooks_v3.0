@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="well">
+      <h3>Edita tu perfil</h3>
+      <%= form_for @user do |f| %>
+        <div class="form-group">
+          <%= f.label :foto_de_perfil %>
+          <br>
+          <%= render 'shared/avatar', user: @user %>
+          <br>
+          <br>
+          <%= f.file_field :avatar %>
+        </div>
+        <div class="form-group">
+          <%= f.label :Foto_de_portada %>
+          <br>
+          <%= render 'shared/cover', user: @user %>
+          <br>
+          <%= f.file_field :cover %>
+        </div>
+        <div class="form-group">
+          <%= f.label :nombre %>
+          <%= f.text_field :name, placeholder: 'Nombre completo', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :Perfil %>
+          <%= f.text_area :about, placeholder: 'Escibe algo de tí', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :ciudad %>
+          <%= f.text_field :location, placeholder: 'De donde eres?', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :teléfono %>
+          <%= f.text_field :phone_number, placeholder: '+569 12345678', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :Fecha_nacimiento %>
+          <%= f.text_field :dob, placeholder: 'ingresa fecha', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :sexo %><br>
+          <%= f.select :sex, options_for_seasons, class: 'form-control', prompt: 'Elige una' %>
+        </div>
+        <div class="actions">
+          <%= submit_tag 'Actualizar', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

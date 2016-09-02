@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="well">
+      <h3>Dar de baja tu cuenta</h3>
+      <hr>
+      <h5>No te gusto MYPOOKS? haz click en el boton para dar de baja tu cuenta.</h5>
+      <br>
+      <%= button_to 'Cancelar my cuenta', registration_path(@user), data: { confirm: "Estás seguro?" }, method: :delete, class: 'btn btn-danger' %>
+    </div>
+  </div>
+</div>

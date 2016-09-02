@@ -1,0 +1,21 @@
+<div class="row">
+  <div id="newsfeed" class="col-lg-6">
+    <h4><%= fa_icon "newspaper-o" %> QUÉ ESTÁ PASANDO</h4>
+    <div id="activities">
+      <% if @activities.empty? %>
+        <div class="well">
+          <%= render('shared/no_resource', resources: 'Activities') %>
+        </div>
+      <% else %>
+        <%= render_activities(@activities, layout: '/shared/activity') %>
+      <% end %>
+    </div>
+    <%= render 'shared/paginate', resources: @activities %>
+  </div>
+  <div id="intro" class="col-lg-6">
+    <%= image_tag 'logo.svg' %>
+    <p>Crea tu cuenta en la primera red social para mascotas será siempre gratis.</p>
+    <hr>
+  <%= link_to 'Registrate gratis', new_user_registration_path , :class => 'btn btn-info'%>
+  </div>
+</div>
