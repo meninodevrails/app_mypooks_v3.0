@@ -11,7 +11,7 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
-  def edit    
+  def edit
   end
 
   def create
@@ -37,7 +37,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:name)
+    params.require(:event).permit(:name, :avatar)
   end
 
   def set_event

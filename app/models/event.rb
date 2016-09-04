@@ -8,7 +8,7 @@ class Event < ActiveRecord::Base
   acts_as_votable
   acts_as_commentable
 
-
+  mount_uploader :avatar, AvatarUploader
 
   include PublicActivity::Model
   tracked only: [:create, :like], owner: Proc.new{ |controller, model| model.user }
